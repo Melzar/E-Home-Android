@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <color name="primaryColor">#ff364051</color>
+    <color name="primaryColorDark">#ff1d222c</color>
+    <color name="colorAccent">#ff6bd59f</color>
+
+    <color name="placeholderColor">#6e364051</color>
+
+    <color name="blueColor">#ff59c2e2</color>
+    <color name="whiteColor">#FFFF</color>
+</resources>
