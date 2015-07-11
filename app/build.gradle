@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.neenbedankt.android-apt' // without this plugin there will be errors related to dagger 2 annotations
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
@@ -21,5 +21,24 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    //region AppCompat Libraries
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
+    //endregion
+    //region Butterknife Libraries ( VI )
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //endregion
+    //region Dagger 2 dependencies ( DI / IOC )
+    compile 'com.google.dagger:dagger:2.1-SNAPSHOT'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    //endregion
+    //region Retrofit dependencies ( Networking )
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    //endregion
+    //region Evenbus dependencies ( Events )
+    compile 'de.greenrobot:eventbus:2.4.0'
+    //endregion
 }
