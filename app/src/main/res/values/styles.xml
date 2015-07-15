@@ -5,7 +5,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <!-- Customize your theme here. -->
     </style>
 
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
@@ -14,12 +13,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Toolbar related styles -->
     <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="navigationIcon">?homeAsUpIndicator</item>
         <item name="android:background">@color/primaryColor</item>
     </style>
 
-
+    <!-- Layouting related styles -->
     <style name="BaseLayout">
         <item name="android:background">@color/primaryColor</item>
     </style>
@@ -43,6 +43,7 @@
         <item name="android:paddingBottom">@dimen/content.no.space</item>
     </style>
 
+    <!-- Button styles -->
     <style name="Button">
     </style>
 
@@ -52,6 +53,7 @@
         <item name="android:layout_marginBottom">@dimen/default.padding.medium</item>
     </style>
 
+    <!-- Input styles -->
     <style name="Input" parent="@android:style/Widget.EditText">
 
     </style>
@@ -81,6 +83,7 @@
         <item name="android:textColor">@color/whiteColor70</item>
     </style>
 
+    <!-- Label styles -->
     <style name="Label">
 
     </style>
@@ -97,14 +100,14 @@
         <item name="android:height">51dp</item>
     </style>
 
-
-
+    <!-- Horizontal line styles -->
     <style name="HorizontalLine">
         <item name="android:background">@color/colorAccent</item>
         <item name="android:layout_marginTop">@dimen/divider.horizontal.top.space</item>
         <item name="android:layout_marginBottom">@dimen/divider.horizontal.bottom.space</item>
     </style>
 
+    <!-- Tabs styles -->
     <style name="Tabs">
         <item name="android:background">@color/primaryColor</item>
     </style>
