@@ -1,19 +1,18 @@
 <resources>
     <string name="app_name">eHome</string>
+    <!-- Navigation -->
     <string name="dashboard">Dashboard</string>
-
-    <string name="login">Login</string>
-    <string name="password">Password</string>
-
-    <string name="button.signin">Sign In</string>
-    <string name="button.signup">Need account? Register now!</string>
-    <string name="button.forgotPassword">Forgot password</string>
-
     <string name="menu.more">More</string>
     <string name="menu.logout">Logout</string>
 
-    <string name="title_activity_base_drawer">BaseDrawerActivity</string>
+    <!-- Login strings -->
+    <string name="login.login">Login</string>
+    <string name="login.password">Password</string>
+    <string name="login.button.signin">Sign In</string>
+    <string name="login.button.signup">Need account? Register now!</string>
+    <string name="login.button.forgotPassword">Forgot password</string>
 
+    <!-- Dashboard related strings -->
     <string name="dashboard.tab.daily">Daily</string>
     <string name="dashbaord.tab.weekly">Weekly</string>
     <string name="dashboard.tab.monthly">Monthly</string>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dashboard">Raport</string>
-
-    <string name="login">Login</string>
-    <string name="password">Password</string>
-
-    <string name="button.signin">Zaloguj się</string>
-    <string name="button.signup">Nie masz konta? Zarejestruj się!</string>
-    <string name="button.forgotPassword">Przypomnij hasło</string>
-
-    <string name="menu.more">Wiecej</string>
+    <!-- Navigation -->
+    <string name="dashboard">Raporty</string>
+    <string name="menu.more">Więcej</string>
     <string name="menu.logout">Wyloguj się</string>
 
+    <!-- Login strings -->
+    <string name="login.login">Login</string>
+    <string name="login.password">Hasło</string>
+    <string name="login.button.signin">Zaloguj się</string>
+    <string name="login.button.signup">Nie masz konta? Zarejestruj się</string>
+    <string name="login.button.forgotPassword">Przypomnij hasło</string>
+
+    <!-- Dashboard -->
     <string name="dashboard.tab.daily">Dzienny</string>
     <string name="dashbaord.tab.weekly">Tygodniowy</string>
     <string name="dashboard.tab.monthly">Miesieczny</string>
