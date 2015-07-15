@@ -18,7 +18,15 @@
         </activity>
         <activity
             android:name=".activity.BaseActivity"
-            android:label="@string/title_activity_base" >
+            android:label="" >
+        </activity>
+        <activity
+            android:name=".activity.dashboard.DashboardActivity"
+            android:label="@string/dashboard" >
+        </activity>
+        <activity
+            android:name=".activity.BaseDrawerActivity"
+            android:label="" >
         </activity>
     </application>
 

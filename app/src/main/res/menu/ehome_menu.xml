@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/menu.dashboard.item"
+            android:title="@string/dashboard">
+        </item>
+        <item android:title="@string/menu.more">
+            <group android:checkableBehavior="single">
+                <menu>
+                    <item
+                        android:id="@+id/menu.logout.item"
+                        android:title="@string/menu.logout"></item>
+                </menu>
+            </group>
+        </item>
+</menu>

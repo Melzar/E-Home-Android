@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="dashboard">Raport</string>
 
     <string name="login">Login</string>
     <string name="password">Password</string>
 
     <string name="button.signin">Zaloguj się</string>
-    <string name="button.signup">Rejestracja</string>
+    <string name="button.signup">Nie masz konta? Zarejestruj się!</string>
     <string name="button.forgotPassword">Przypomnij hasło</string>
 
+    <string name="menu.more">Wiecej</string>
+    <string name="menu.logout">Wyloguj się</string>
+
+    <string name="dashboard.tab.daily">Dzienny</string>
+    <string name="dashbaord.tab.weekly">Tygodniowy</string>
+    <string name="dashboard.tab.monthly">Miesieczny</string>
+    <string name="dashboard.tab.quarterly">Kwartalny</string>
+    <string name="dashboard.tab.yearly">Roczny</string>
 </resources>

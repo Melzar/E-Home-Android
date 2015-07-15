@@ -1,5 +1,15 @@
 <android.support.v7.widget.Toolbar
+        style="@style/Toolbar"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="?actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    >
+        <include
+            android:id="@+id/extended_toolbar_content"
+            android:visibility="gone"
+            layout="@layout/dashboard_toolbar_content"
+            >
+        </include>
 </android.support.v7.widget.Toolbar>

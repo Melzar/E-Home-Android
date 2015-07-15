@@ -5,7 +5,6 @@
     android:layout_height="match_parent">
     <include
         android:id="@+id/content_toolbar"
-        android:visibility="gone"
         layout="@layout/content_toolbar"
         >
     </include>

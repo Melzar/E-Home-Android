@@ -41,4 +41,7 @@ dependencies {
     //region Evenbus dependencies ( Events )
     compile 'de.greenrobot:eventbus:2.4.0'
     //endregion
+    //region Chart libraries ( Charts )
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.0'
+    //endregion
 }

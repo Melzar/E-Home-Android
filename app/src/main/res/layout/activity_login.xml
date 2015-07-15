@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_logo"
+            android:inputType="textNoSuggestions"
             />
         <EditText
             style="@style/Input.LightBackground"
@@ -38,6 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/input_login"
+            android:inputType="textPassword|textNoSuggestions"
+            android:fontFamily="sans-serif"
             />
         <Button
             style="@style/Button.Primary"

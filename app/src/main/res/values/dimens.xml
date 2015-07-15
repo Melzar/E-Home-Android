@@ -1,6 +1,10 @@
 <resources>
     <dimen name="content.no.space">0dp</dimen>
 
+    <dimen name="divider.horizontal.space">1dp</dimen>
+    <dimen name="divider.horizontal.top.space">4dp</dimen>
+    <dimen name="divider.horizontal.bottom.space">4dp</dimen>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="content.top.space">8dp</dimen>
     <dimen name="content.left.space">16dp</dimen>
@@ -21,4 +25,9 @@
     <dimen name="default.padding.medium">16dp</dimen>
     <dimen name="default.padding.large">24dp</dimen>
     <dimen name="default.padding.xlarge">32dp</dimen>
+
+    <dimen name="toolbar.extended">232dp</dimen>
+
+    <dimen name="input.head">24sp</dimen>
+    <dimen name="input.subhead">18sp</dimen>
 </resources>
