@@ -1,6 +1,7 @@
 <resources>
     <dimen name="content.no.space">0dp</dimen>
 
+    <!-- Horizontal line styles -->
     <dimen name="divider.horizontal.space">1dp</dimen>
     <dimen name="divider.horizontal.top.space">4dp</dimen>
     <dimen name="divider.horizontal.bottom.space">4dp</dimen>
@@ -15,19 +16,21 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- Default content spacing -->
     <dimen name="content.line.left.space">-16dp</dimen>
     <dimen name="content.line.right.space">-16dp</dimen>
     <dimen name="content.line.top.space">16dp</dimen>
     <dimen name="content.line.bottom.space">16dp</dimen>
     <dimen name="content.line.height">1dp</dimen>
 
+    <!-- Default padding styles -->
     <dimen name="default.padding.small">8dp</dimen>
     <dimen name="default.padding.medium">16dp</dimen>
     <dimen name="default.padding.large">24dp</dimen>
     <dimen name="default.padding.xlarge">32dp</dimen>
 
+    <!--  Extended toolbar styles -->
     <dimen name="toolbar.extended">232dp</dimen>
-
     <dimen name="input.head">24sp</dimen>
     <dimen name="input.subhead">18sp</dimen>
 </resources>
