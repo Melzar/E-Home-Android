@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Navigation -->
-    <string name="dashboard">Raporty</string>
+    <string name="dashboard">Pulpit</string>
     <string name="menu.more">Więcej</string>
     <string name="menu.logout">Wyloguj się</string>
 

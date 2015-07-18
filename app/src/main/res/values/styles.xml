@@ -53,6 +53,24 @@
         <item name="android:layout_marginBottom">@dimen/default.padding.medium</item>
     </style>
 
+    <style name="Button.Circle">
+        <item name="android:layout_marginRight">@dimen/default.padding.small</item>
+        <item name="android:layout_width">@dimen/button.circle.medium</item>
+        <item name="android:layout_height">@dimen/button.circle.medium</item>
+        <item name="android:background">@drawable/circle_selector</item>
+        <item name="android:textColor">@color/circle_shape_text_color_selector</item>
+    </style>
+
+    <style name="Button.Circle.Small">
+        <item name="android:layout_width">@dimen/button.circle.small</item>
+        <item name="android:layout_height">@dimen/button.circle.small</item>
+    </style>
+
+    <style name="Button.Circle.Large">
+        <item name="android:layout_width">@dimen/button.circle.large</item>
+        <item name="android:layout_height">@dimen/button.circle.large</item>
+    </style>
+
     <!-- Input styles -->
     <style name="Input" parent="@android:style/Widget.EditText">
 

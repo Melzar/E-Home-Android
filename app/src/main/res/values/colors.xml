@@ -9,6 +9,7 @@
 
     <!-- Secondary app colors -->
     <color name="blueColor">#ff59c2e2</color>
+    <color name="blackColor">#000</color>
     <color name="whiteColor">#FFFF</color>
     <color name="whiteColor70">#B3FFFFFF</color>
     <color name="backgroundColorLight">#FAFAFA</color>

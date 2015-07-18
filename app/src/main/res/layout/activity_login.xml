@@ -1,11 +1,30 @@
 <RelativeLayout
     style="@style/BaseLayout.ContentPadding"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
-
+    <LinearLayout
+        android:id="@+id/language_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        >
+        <Button
+            style="@style/Button.Circle"
+            android:id="@+id/english_language_button"
+            android:text="EN"
+            />
+        <Button
+            style="@style/Button.Circle"
+            android:id="@+id/polish_language_button"
+            android:layout_toRightOf="@+id/english_language_button"
+            android:text="PL"
+            />
+    </LinearLayout>
     <RelativeLayout
         android:id="@+id/login_content"
         android:layout_width="match_parent"
@@ -66,7 +85,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="bottom"
         >
-        <TextView
+        <Button
             android:id="@+id/button_signiup"
             style="@style/Label.Primary.Button"
             android:background="@drawable/editext_border"

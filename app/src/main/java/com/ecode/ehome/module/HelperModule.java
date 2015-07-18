@@ -2,6 +2,7 @@ package com.ecode.ehome.module;
 
 import android.content.Context;
 
+import com.ecode.ehome.helper.LocaleHelper;
 import com.ecode.ehome.helper.NavigationHelper;
 
 import javax.inject.Singleton;
@@ -32,5 +33,11 @@ public class HelperModule {
     @Singleton
     public NavigationHelper provideNavigationHelper(){
         return new NavigationHelper(context);
+    }
+
+    @Provides
+    @Singleton
+    public LocaleHelper provideLocaleHelper(){
+        return new LocaleHelper(context);
     }
 }

@@ -11,11 +11,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ecode.ehome.R;
+import com.ecode.ehome.common.enumeration.NavigationMenuEnum;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class BaseDrawerActivity extends BaseActivity {
+public class BaseDrawerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     @Nullable
     @Bind(R.id.drawer_navigation)
@@ -34,6 +35,7 @@ public class BaseDrawerActivity extends BaseActivity {
         setContentView(R.layout.content_with_drawer);
         setLayoutWithInjections(activityLayout, R.id.app_content);
         setDrawerToolbar();
+        highlightMenuItem();
     }
 
     private void setDrawerToolbar(){
@@ -41,6 +43,7 @@ public class BaseDrawerActivity extends BaseActivity {
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_closed);
         actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        navigationView.setNavigationItemSelectedListener(this);
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -48,4 +51,21 @@ public class BaseDrawerActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
+    @Override
+    public boolean onNavigationItemSelected(MenuItem menuItem) {
+        drawerLayout.closeDrawers();
+        menuItem.setChecked(true);
+        navigateToMenuItem(NavigationMenuEnum.getActivityByMenuId(menuItem.getItemId()));
+        return true;
+    }
+
+    private void navigateToMenuItem(NavigationMenuEnum menu){
+        navigationHelper.navigateTo(menu.getActivityClass());
+    }
+
+    private void highlightMenuItem(){
+        MenuItem menuItem = navigationView.getMenu().findItem(NavigationMenuEnum.getMenuIdFromActivityClass(this.getClass()).getMenuItemId());
+        menuItem.setCheckable(true);
+        menuItem.setChecked(true);
+    }
 }

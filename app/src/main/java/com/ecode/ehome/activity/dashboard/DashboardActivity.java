@@ -1,15 +1,12 @@
 package com.ecode.ehome.activity.dashboard;
 
 import android.support.design.widget.TabLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.ecode.ehome.R;
-import com.ecode.ehome.activity.BaseActivity;
 import com.ecode.ehome.activity.BaseDrawerActivity;
 import com.ecode.ehome.common.enumeration.DashboardTabEnum;
+import com.ecode.ehome.common.enumeration.NavigationMenuEnum;
 
 import butterknife.Bind;
 

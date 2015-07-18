@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.ecode.ehome.R;
 import com.ecode.ehome.component.DaggerHelperComponent;
+import com.ecode.ehome.helper.LocaleHelper;
 import com.ecode.ehome.helper.NavigationHelper;
 import com.ecode.ehome.module.HelperModule;
 
@@ -29,6 +30,9 @@ public class BaseActivity extends AppCompatActivity {
 
     @Inject
     protected NavigationHelper navigationHelper;
+
+    @Inject
+    protected LocaleHelper localeHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

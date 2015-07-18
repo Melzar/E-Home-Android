@@ -33,4 +33,9 @@
     <dimen name="toolbar.extended">232dp</dimen>
     <dimen name="input.head">24sp</dimen>
     <dimen name="input.subhead">18sp</dimen>
+
+    <!--  Circle button size -->
+    <dimen name="button.circle.small">25dp</dimen>
+    <dimen name="button.circle.medium">50dp</dimen>
+    <dimen name="button.circle.large">75dp</dimen>
 </resources>

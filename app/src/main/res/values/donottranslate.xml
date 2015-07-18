@@ -4,4 +4,8 @@
     <!-- Drawer related strings ( values to open/close drawer ) -->
     <string name="drawer.open">O</string>
     <string name="drawer.closed">C</string>
+
+    <!-- Supported locales -->
+    <string name="language.english">en</string>
+    <string name="language.polish">pl</string>
 </resources>

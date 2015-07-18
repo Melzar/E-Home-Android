@@ -16,6 +16,16 @@ public class LoginActivity extends BaseActivity {
         navigationHelper.navigateTo(DashboardActivity.class);
     }
 
+    @OnClick(R.id.english_language_button)
+    public void englishClicked(){
+        localeHelper.updateApplicationLocale(R.string.language_english);
+    }
+
+    @OnClick(R.id.polish_language_button)
+    public void polishClicked(){
+        localeHelper.updateApplicationLocale(R.string.language_polish);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
