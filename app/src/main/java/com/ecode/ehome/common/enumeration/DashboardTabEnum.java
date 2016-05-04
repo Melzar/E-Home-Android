@@ -2,9 +2,6 @@ package com.ecode.ehome.common.enumeration;
 
 import com.ecode.ehome.R;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by Tomasz Matuszewski on 14/07/15.
  */

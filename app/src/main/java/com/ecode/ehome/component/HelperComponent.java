@@ -1,7 +1,5 @@
 package com.ecode.ehome.component;
 
-import android.content.Context;
-
 import com.ecode.ehome.activity.BaseActivity;
 import com.ecode.ehome.helper.NavigationHelper;
 import com.ecode.ehome.module.HelperModule;

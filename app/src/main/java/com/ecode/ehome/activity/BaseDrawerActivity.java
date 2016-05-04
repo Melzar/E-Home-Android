@@ -1,19 +1,14 @@
 package com.ecode.ehome.activity;
 
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.ecode.ehome.R;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class BaseDrawerActivity extends BaseActivity {
 
