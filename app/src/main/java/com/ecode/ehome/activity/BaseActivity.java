@@ -19,12 +19,12 @@ import com.ecode.ehome.module.HelperModule;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class BaseActivity extends AppCompatActivity {
 
-    @Bind(R.id.content_toolbar)
+    @BindView(R.id.content_toolbar)
     protected Toolbar toolbar;
 
     @Inject

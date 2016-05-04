@@ -12,17 +12,17 @@ import android.view.MenuItem;
 
 import com.ecode.ehome.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class BaseDrawerActivity extends BaseActivity {
 
     @Nullable
-    @Bind(R.id.drawer_navigation)
+    @BindView(R.id.drawer_navigation)
     NavigationView navigationView;
 
     @Nullable
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
 
     @Override

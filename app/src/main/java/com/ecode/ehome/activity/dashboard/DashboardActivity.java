@@ -11,11 +11,11 @@ import com.ecode.ehome.activity.BaseActivity;
 import com.ecode.ehome.activity.BaseDrawerActivity;
 import com.ecode.ehome.common.enumeration.DashboardTabEnum;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 public class DashboardActivity extends BaseDrawerActivity implements TabLayout.OnTabSelectedListener {
 
-    @Bind(R.id.dashboard_tabs)
+    @BindView(R.id.dashboard_tabs)
     TabLayout tabLayout;
 
     @Override
