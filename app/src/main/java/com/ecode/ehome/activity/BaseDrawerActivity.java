@@ -8,6 +8,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 
 import com.ecode.ehome.R;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import butterknife.BindView;
 
 public class BaseDrawerActivity extends BaseActivity {
@@ -33,7 +35,12 @@ public class BaseDrawerActivity extends BaseActivity {
 
     private void setDrawerToolbar(){
         setSupportActionBar(toolbar);
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_closed);
+        ActionBarDrawerToggle actionBarDrawerToggle =
+                new ActionBarDrawerToggle(this,
+                        drawerLayout,
+                        toolbar,
+                        R.string.drawer_open,
+                        R.string.drawer_closed);
         actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -43,4 +50,8 @@ public class BaseDrawerActivity extends BaseActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
+    @Subscribe
+    public void placeholdera(Object o){
+
+    }
 }

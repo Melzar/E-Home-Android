@@ -2,6 +2,7 @@ package com.ecode.ehome.module;
 
 import android.content.Context;
 
+import com.ecode.ehome.helper.AlertHelper;
 import com.ecode.ehome.helper.NavigationHelper;
 
 import javax.inject.Singleton;
@@ -33,4 +34,8 @@ public class HelperModule {
     public NavigationHelper provideNavigationHelper(){
         return new NavigationHelper(context);
     }
+
+    @Provides
+    @Singleton
+    public AlertHelper provideAlertHelper() { return new AlertHelper(context); }
 }

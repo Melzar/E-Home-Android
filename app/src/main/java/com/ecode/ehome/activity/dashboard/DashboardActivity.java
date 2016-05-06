@@ -7,6 +7,8 @@ import com.ecode.ehome.R;
 import com.ecode.ehome.activity.BaseDrawerActivity;
 import com.ecode.ehome.common.enumeration.DashboardTabEnum;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import butterknife.BindView;
 
 public class DashboardActivity extends BaseDrawerActivity implements TabLayout.OnTabSelectedListener {
@@ -43,6 +45,11 @@ public class DashboardActivity extends BaseDrawerActivity implements TabLayout.O
 
     @Override
     public void onTabReselected(TabLayout.Tab tab) {
+
+    }
+
+    @Subscribe
+    public void placeholder(Object o){
 
     }
 }

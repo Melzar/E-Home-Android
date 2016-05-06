@@ -8,8 +8,12 @@ import android.view.ViewGroup;
 
 import com.ecode.ehome.R;
 import com.ecode.ehome.component.DaggerHelperComponent;
+import com.ecode.ehome.component.HelperComponent;
+import com.ecode.ehome.helper.AlertHelper;
 import com.ecode.ehome.helper.NavigationHelper;
 import com.ecode.ehome.module.HelperModule;
+
+import org.greenrobot.eventbus.EventBus;
 
 import javax.inject.Inject;
 
@@ -21,14 +25,17 @@ public class BaseActivity extends AppCompatActivity {
     @BindView(R.id.content_toolbar)
     protected Toolbar toolbar;
 
-    @Inject
     protected NavigationHelper navigationHelper;
+    protected AlertHelper alertHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_with_toolbar);
-        DaggerHelperComponent.builder().helperModule(new HelperModule(this)).build().inject(this);
+        HelperComponent helperComponent = DaggerHelperComponent.builder()
+                .helperModule(new HelperModule(this)).build();
+        navigationHelper = helperComponent.provideNavigationHelper();
+        alertHelper = helperComponent.provideAlertHelper();
     }
 
     protected void setActivityContent(int actvityLayout){
@@ -53,5 +60,17 @@ public class BaseActivity extends AppCompatActivity {
         extendedContainer.addView(extendedLayout);
         extendedContainer.setVisibility(View.VISIBLE);
 
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        EventBus.getDefault().unregister(this);
     }
 }

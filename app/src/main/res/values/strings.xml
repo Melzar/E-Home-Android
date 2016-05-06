@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">eHome</string>
+
+    <!-- Generic -->
+    <string name="error">Error</string>
+
     <!-- Navigation -->
     <string name="dashboard">Dashboard</string>
     <string name="menu.more">More</string>

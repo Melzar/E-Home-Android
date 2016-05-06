@@ -30,7 +30,7 @@ android {
         }
         debug {
             buildConfigField 'boolean', 'LOGGING', 'true'
-            buildConfigField 'String', 'API_URL', 'http://10.0.2.2:8080'
+            buildConfigField 'String', 'API_URL', '"http://10.0.2.2:3000"'
         }
     }
 }
@@ -51,11 +51,13 @@ dependencies {
     compile 'com.google.dagger:dagger:2.2'
     apt 'com.google.dagger:dagger-compiler:2.2'
     provided 'org.glassfish:javax.annotation:10.0-b28'
-
     //endregion
     //region Retrofit dependencies ( Networking )
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.2'
+    compile 'com.github.jasminb:jsonapi-converter:0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     //endregion
     //region Evenbus dependencies ( Events )
     compile 'org.greenrobot:eventbus:3.0.0'
