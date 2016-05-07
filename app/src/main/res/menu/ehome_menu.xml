@@ -4,6 +4,18 @@
             android:id="@+id/menu.dashboard.item"
             android:title="@string/dashboard">
         </item>
+        <item
+            android:id="@+id/menu.accomodations.item"
+            android:title="@string/menu.accomodations">
+        </item>
+        <item
+            android:id="@+id/menu.spaces.item"
+            android:title="@string/menu.spaces">
+        </item>
+        <item
+            android:id="@+id/menu.controls.item"
+            android:title="@string/menu.controls">
+        </item>
         <item android:title="@string/menu.more">
             <group android:checkableBehavior="single">
                 <menu>

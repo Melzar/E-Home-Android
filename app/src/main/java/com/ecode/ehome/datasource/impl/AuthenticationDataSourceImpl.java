@@ -37,6 +37,7 @@ public class AuthenticationDataSourceImpl implements AuthenticationDataSource {
                     SessionUtility.getInstance().setAuthentication(authentication);
                     AuthenticationDataSourceEvents.OnAuthenticationSuccess success =
                             new AuthenticationDataSourceEvents.OnAuthenticationSuccess();
+                    SessionUtility.getInstance().clearSession();
                     EventBus.getDefault().post(success);
                 }else{
                     AuthenticationDataSourceEvents.OnAuthenticationError error =
@@ -52,6 +53,36 @@ public class AuthenticationDataSourceImpl implements AuthenticationDataSource {
                         new AuthenticationDataSourceEvents.OnAuthenticationError(new ErrorResponse(
                                 t.getMessage(),t.hashCode())
                         );
+                EventBus.getDefault().post(error);
+            }
+        });
+    }
+
+    @Override
+    public void logoutUser() {
+        retrofitAuthenticationDataSource.logoutUser().enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if(response.isSuccessful()){
+                    AuthenticationDataSourceEvents.OnLogoutSuccess success =
+                            new AuthenticationDataSourceEvents.OnLogoutSuccess();
+                    EventBus.getDefault().post(success);
+                }else{
+                    AuthenticationDataSourceEvents.OnLogoutError error =
+                            new AuthenticationDataSourceEvents.OnLogoutError( new ErrorResponse(
+                                    response.message(), response.code()
+                            ));
+                    EventBus.getDefault().post(error);
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                AuthenticationDataSourceEvents.OnLogoutError error =
+                        new AuthenticationDataSourceEvents.OnLogoutError( new ErrorResponse(
+                                t.getMessage(), t.hashCode()
+                        ));
                 EventBus.getDefault().post(error);
             }
         });

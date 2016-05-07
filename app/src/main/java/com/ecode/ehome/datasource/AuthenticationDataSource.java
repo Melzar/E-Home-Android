@@ -6,4 +6,5 @@ package com.ecode.ehome.datasource;
 public interface AuthenticationDataSource {
 
     void loginUser(String email, String password);
+    void logoutUser();
 }

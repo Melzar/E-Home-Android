@@ -11,7 +11,8 @@ public enum DashboardTabEnum {
     WEEKLY(R.string.dashbaord_tab_weekly),
     MONTHLY(R.string.dashboard_tab_monthly),
     QUARTERLY(R.string.dashboard_tab_quarterly),
-    YEARLY(R.string.dashboard_tab_yearly);
+    YEARLY(R.string.dashboard_tab_yearly),
+    AAAAAAA(R.string.dashboard_tab_yearly);
 
     private int stringId;
 

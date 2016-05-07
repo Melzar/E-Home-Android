@@ -8,7 +8,9 @@
     <string name="dashboard">Dashboard</string>
     <string name="menu.more">More</string>
     <string name="menu.logout">Logout</string>
-
+    <string name="menu.accomodations">Accomodations</string>
+    <string name="menu.spaces">Spaces</string>
+    <string name="menu.controls">Controls</string>
     <!-- Login strings -->
     <string name="login.login">Login</string>
     <string name="login.password">Password</string>

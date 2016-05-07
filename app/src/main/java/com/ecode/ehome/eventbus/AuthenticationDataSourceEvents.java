@@ -22,4 +22,19 @@ public class AuthenticationDataSourceEvents {
             return errorResponse;
         }
     }
+
+    public static class OnLogoutSuccess {
+    }
+
+    public static class OnLogoutError {
+        ErrorResponse errorResponse;
+
+        public OnLogoutError(ErrorResponse errorResponse) {
+            this.errorResponse = errorResponse;
+        }
+
+        public ErrorResponse getErrorResponse() {
+            return errorResponse;
+        }
+    }
 }
