@@ -1,6 +1,8 @@
 package com.ecode.ehome.module;
 
+import com.ecode.ehome.datasource.AccomodationDataSource;
 import com.ecode.ehome.datasource.AuthenticationDataSource;
+import com.ecode.ehome.datasource.impl.AccomodationDataSourceImpl;
 import com.ecode.ehome.datasource.impl.AuthenticationDataSourceImpl;
 
 import javax.inject.Singleton;
@@ -19,5 +21,11 @@ public class NetworkModule {
     @Singleton
     public AuthenticationDataSource provideAuthenticationService(Retrofit retrofit){
         return new AuthenticationDataSourceImpl(retrofit);
+    }
+
+    @Provides
+    @Singleton
+    public AccomodationDataSource provideAccomodationService(Retrofit retrofit){
+        return new AccomodationDataSourceImpl(retrofit);
     }
 }

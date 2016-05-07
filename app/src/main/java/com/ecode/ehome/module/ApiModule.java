@@ -5,8 +5,10 @@ import com.ecode.ehome.common.security.AuthenticationTokenUtility;
 import com.ecode.ehome.common.security.SessionUtility;
 import com.ecode.ehome.compatibility.JSONAPIConverterFactory;
 import com.ecode.ehome.model.Accomodation;
+import com.ecode.ehome.model.Authentication;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -38,6 +40,7 @@ public class ApiModule {
     @Singleton
     public Retrofit provideRetrofit(){
         ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -46,6 +49,7 @@ public class ApiModule {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request original = chain.request();
+                Authentication authentication = SessionUtility.getInstance().getAuthentication();
                 if ( SessionUtility.getInstance().getAuthentication() != null ){
                     Request.Builder requestBuilder = original.newBuilder()
                             .header("Authorization",
@@ -60,8 +64,8 @@ public class ApiModule {
         return new Retrofit.Builder()
                 .baseUrl(API_URL)
                 .client(httpClient.build())
-                .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(new JSONAPIConverterFactory(objectMapper, Accomodation.class))
+                .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

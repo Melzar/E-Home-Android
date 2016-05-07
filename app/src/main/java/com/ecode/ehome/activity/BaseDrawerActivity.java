@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import com.ecode.ehome.R;
+import com.ecode.ehome.activity.accomodation.AccomodationActivity;
 import com.ecode.ehome.activity.dashboard.DashboardActivity;
 import com.ecode.ehome.activity.login.LoginActivity;
 import com.ecode.ehome.common.security.SessionUtility;
@@ -38,7 +39,7 @@ public class BaseDrawerActivity extends BaseActivity implements NavigationView.O
 
     private Map<Integer, Class> menuMapper  = new HashMap<Integer, Class>() {{
             put(R.id.menu_dashboard_item, DashboardActivity.class);
-            put(R.id.menu_accomodations_item, DashboardActivity.class);
+            put(R.id.menu_accomodations_item, AccomodationActivity.class);
             put(R.id.menu_spaces_item,DashboardActivity.class);
             put(R.id.menu_controls_item, DashboardActivity.class);
             put(R.id.menu_logout_item, null);

@@ -37,7 +37,6 @@ public class AuthenticationDataSourceImpl implements AuthenticationDataSource {
                     SessionUtility.getInstance().setAuthentication(authentication);
                     AuthenticationDataSourceEvents.OnAuthenticationSuccess success =
                             new AuthenticationDataSourceEvents.OnAuthenticationSuccess();
-                    SessionUtility.getInstance().clearSession();
                     EventBus.getDefault().post(success);
                 }else{
                     AuthenticationDataSourceEvents.OnAuthenticationError error =
@@ -66,6 +65,7 @@ public class AuthenticationDataSourceImpl implements AuthenticationDataSource {
                 if(response.isSuccessful()){
                     AuthenticationDataSourceEvents.OnLogoutSuccess success =
                             new AuthenticationDataSourceEvents.OnLogoutSuccess();
+                    SessionUtility.getInstance().clearSession();
                     EventBus.getDefault().post(success);
                 }else{
                     AuthenticationDataSourceEvents.OnLogoutError error =
