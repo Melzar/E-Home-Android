@@ -7,11 +7,13 @@
             type="com.ecode.ehome.model.Accomodation" />
     </data>
     <RelativeLayout
+        style="@style/ListItem.SingleLine"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            style="@style/ListItemText.SingleLine.PrimaryText"
             android:id="@+id/accomodation.list.item.name"
+            android:layout_centerVertical="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{accomodation.name}"/>

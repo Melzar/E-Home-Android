@@ -112,6 +112,31 @@
         <item name="android:background">@color/primaryColor</item>
     </style>
 
+    <!-- List item styles -->
+    <style name="ListItem">
+        <item name="android:paddingLeft">@dimen/default.padding.medium</item>
+        <item name="android:paddingRight">@dimen/default.padding.medium</item>
+        <item name="android:paddingTop">@dimen/default.padding.small</item>
+    </style>
+
+    <style name="ListItem.SingleLine">
+        <item name="android:layout_height">@dimen/listItem.singleLine.height</item>
+    </style>
+
+    <style name="ListItemText">
+    </style>
+
+    <style name="ListItemText.SingleLine">
+
+    </style>
+
+    <style name="ListItemText.SingleLine.PrimaryText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/blackColor87</item>
+    </style>
+
 
 
 
