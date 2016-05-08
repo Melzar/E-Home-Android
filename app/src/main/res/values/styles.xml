@@ -19,9 +19,15 @@
         <item name="android:background">@color/primaryColor</item>
     </style>
 
+    <style name="Logo">
+        <item name="android:textSize">170sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/logoColor</item>
+    </style>
+
     <!-- Layouting related styles -->
     <style name="BaseLayout">
-        <item name="android:background">@color/primaryColor</item>
+        <item name="android:background">@color/whiteColor</item>
     </style>
 
     <style name="BaseLayout.NoPadding">
@@ -62,7 +68,7 @@
         <item name="android:minHeight">51dp</item>
         <item name="android:paddingLeft">@dimen/default.padding.small</item>
         <item name="android:background">@color/whiteColor</item>
-        <item name="android:textColor">@color/primaryColorDark</item>
+        <item name="android:textColor">@color/blackColor87</item>
         <item name="android:textColorHint">@color/placeholderColor</item>
         <item name="android:layout_marginBottom">@dimen/default.padding.medium</item>
     </style>
@@ -85,11 +91,26 @@
 
     <!-- Label styles -->
     <style name="Label">
-
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="Label.White">
         <item name="android:textColor">@color/whiteColor</item>
+    </style>
+
+    <style name="Label.Black">
+        <item name="android:textColor">@color/blackColor</item>
+    </style>
+
+    <style name="Label.Black.Primary">
+        <item name="android:textColor">@color/blackColor87</item>
+        <item name="android:textSize">@dimen/input.primary.font.size</item>
+    </style>
+
+    <style name="Label.Black.Secondary">
+        <item name="android:textColor">@color/blackColor54</item>
+        <item name="android:textSize">@dimen/input.secondary.font.size</item>
     </style>
 
     <style name="Label.Primary">

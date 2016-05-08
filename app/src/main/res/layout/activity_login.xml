@@ -12,16 +12,47 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         >
-        <ImageView
+        <!--<ImageView-->
+            <!--android:id="@+id/login_logo"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:scaleType="center"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="@dimen/default.padding.xlarge"-->
+            <!--android:src="@drawable/logo_ehome"-->
+            <!--/>-->
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/Logo"
             android:id="@+id/login_logo"
-            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:scaleType="center"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/default.padding.xlarge"
-            android:src="@drawable/logo_ehome"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:text="@string/login.logo"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/Label.Black.Primary"
+            android:id="@+id/login_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_logo"
+            android:layout_marginBottom="@dimen/content.bottom.space"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:text="@string/login.welcome.primary"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/Label.Black.Secondary"
+            android:id="@+id/login_welcome_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_welcome"
+            android:layout_marginBottom="@dimen/default.padding.medium"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:text="@string/login.welcome.secondary"
             />
         <EditText
             style="@style/Input.LightBackground"
@@ -29,8 +60,9 @@
             android:hint="@string/login.login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/login_logo"
+            android:layout_below="@+id/login_welcome_description"
             android:inputType="textNoSuggestions"
+            android:background="@drawable/editext_border"
             />
         <EditText
             style="@style/Input.LightBackground"
@@ -41,6 +73,7 @@
             android:layout_below="@+id/input_login"
             android:inputType="textPassword|textNoSuggestions"
             android:fontFamily="sans-serif"
+            android:background="@drawable/editext_border"
             />
         <Button
             style="@style/Button.Primary"
@@ -58,24 +91,24 @@
             android:text="@string/login.button.forgotPassword"
             />
     </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/bottom_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="bottom"
-        >
-        <TextView
-            android:id="@+id/button_signiup"
-            style="@style/Label.Primary.Button"
-            android:background="@drawable/editext_border"
-            android:gravity="center"
-            android:textAlignment="gravity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login.button.signup"
-            />
-    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/bottom_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/login_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:gravity="bottom"-->
+        <!--&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/button_signiup"-->
+            <!--style="@style/Label.Primary.Button"-->
+            <!--android:background="@drawable/editext_border"-->
+            <!--android:gravity="center"-->
+            <!--android:textAlignment="gravity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login.button.signup"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
 
 </RelativeLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary app colors -->
-    <color name="primaryColor">#ff364051</color>
-    <color name="primaryColorDark">#ff1d222c</color>
-    <color name="colorAccent">#ff6bd59f</color>
+    <color name="primaryColor">#1AB394</color>
+    <color name="primaryColorDark">#1AB394</color>
+    <color name="colorAccent">#1ab394</color>
 
     <color name="placeholderColor">#6e364051</color>
 
@@ -15,4 +15,11 @@
     <!-- Primary text colors -->
     <color name="blackColor">#000000</color>
     <color name="blackColor87">#DE000000</color>
+    <color name="blackColor54">#8A000000</color>
+
+    <!-- Logo color -->
+    <color name="logoColor">#e6e6e6</color>
+
+    <!-- Input border color -->
+    <color name="inputBorderColor">#e5e6e7</color>
 </resources>

@@ -12,6 +12,9 @@
     <string name="menu.spaces">Spaces</string>
     <string name="menu.controls">Controls</string>
     <!-- Login strings -->
+    <string name="login.logo">eH</string>
+    <string name="login.welcome.primary">Welcome to eHome</string>
+    <string name="login.welcome.secondary">Login in. To see it in action.</string>
     <string name="login.login">Login</string>
     <string name="login.password">Password</string>
     <string name="login.button.signin">Sign In</string>
