@@ -6,14 +6,17 @@
         </item>
         <item
             android:id="@+id/menu.accomodations.item"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu.accomodations">
         </item>
         <item
             android:id="@+id/menu.spaces.item"
+            android:icon="@drawable/ic_vpn_key_black_24dp"
             android:title="@string/menu.spaces">
         </item>
         <item
             android:id="@+id/menu.controls.item"
+            android:icon="@drawable/ic_power_black_24dp"
             android:title="@string/menu.controls">
         </item>
         <item android:title="@string/menu.more">
