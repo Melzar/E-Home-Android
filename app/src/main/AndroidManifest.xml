@@ -29,7 +29,8 @@
             android:name=".activity.BaseDrawerActivity"
             android:label="" />
         <activity android:name=".activity.accomodation.AccomodationActivity" />
-        <activity android:name=".activity.accomodation.SpaceActivity"></activity>
+        <activity android:name=".activity.accomodation.SpaceActivity" />
+        <activity android:name=".activity.accomodation.ControlActivity"></activity>
     </application>
 
 </manifest>

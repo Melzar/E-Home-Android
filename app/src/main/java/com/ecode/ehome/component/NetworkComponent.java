@@ -3,6 +3,7 @@ package com.ecode.ehome.component;
 import com.ecode.ehome.activity.BaseActivity;
 import com.ecode.ehome.activity.BaseDrawerActivity;
 import com.ecode.ehome.activity.accomodation.AccomodationActivity;
+import com.ecode.ehome.activity.accomodation.ControlActivity;
 import com.ecode.ehome.activity.accomodation.SpaceActivity;
 import com.ecode.ehome.activity.login.LoginActivity;
 import com.ecode.ehome.datasource.AuthenticationDataSource;
@@ -24,5 +25,6 @@ public interface NetworkComponent {
     void inject(LoginActivity loginActivity);
     void inject(AccomodationActivity accomodationActivity);
     void inject(SpaceActivity spaceActivity);
+    void inject(ControlActivity controlActivity);
 
 }

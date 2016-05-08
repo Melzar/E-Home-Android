@@ -23,7 +23,7 @@ public class SpaceDataSourceEvents {
     }
 
     public static class OnGetSpacesError{
-        ErrorResponse errorResponse;
+        private ErrorResponse errorResponse;
 
         public OnGetSpacesError(ErrorResponse errorResponse) {
             this.errorResponse = errorResponse;

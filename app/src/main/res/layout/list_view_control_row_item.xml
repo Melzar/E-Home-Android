@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            android:id="@+id/control.list.item.variable"
+            name="control"
+            type="com.ecode.ehome.model.Control" />
+    </data>
+    <RelativeLayout
+        style="@style/ListItem.SingleLine"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/ListItemText.SingleLine.PrimaryText"
+            android:id="@+id/control.list.item.name"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{control.name}"/>
+        <!--<TextView-->
+        <!--android:id="@+id/accomodation.list.item.type"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/accomodation.list.item.name"-->
+        <!--android:text="@{accomodation.type.name}"-->
+        <!--/>-->
+    </RelativeLayout>
+</layout>

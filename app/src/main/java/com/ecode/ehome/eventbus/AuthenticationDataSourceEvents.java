@@ -12,7 +12,7 @@ public class AuthenticationDataSourceEvents {
     }
 
     public static class OnAuthenticationError {
-        ErrorResponse errorResponse;
+        private ErrorResponse errorResponse;
 
         public OnAuthenticationError(ErrorResponse errorResponse) {
             this.errorResponse = errorResponse;
@@ -27,7 +27,7 @@ public class AuthenticationDataSourceEvents {
     }
 
     public static class OnLogoutError {
-        ErrorResponse errorResponse;
+        private ErrorResponse errorResponse;
 
         public OnLogoutError(ErrorResponse errorResponse) {
             this.errorResponse = errorResponse;

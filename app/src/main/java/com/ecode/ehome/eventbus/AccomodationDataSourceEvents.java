@@ -12,7 +12,7 @@ public class AccomodationDataSourceEvents {
 
 
     public static class OnGetAccomodationsSuccess{
-        List<Accomodation> accomodations;
+        private List<Accomodation> accomodations;
 
         public OnGetAccomodationsSuccess(List<Accomodation> accomodations) {
             this.accomodations = accomodations;
@@ -24,7 +24,7 @@ public class AccomodationDataSourceEvents {
     }
 
     public static class OnGetAccomodationsError{
-        ErrorResponse errorResponse;
+        private ErrorResponse errorResponse;
 
         public OnGetAccomodationsError(ErrorResponse errorResponse) {
             this.errorResponse = errorResponse;

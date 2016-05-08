@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import com.ecode.ehome.R;
 import com.ecode.ehome.activity.accomodation.AccomodationActivity;
+import com.ecode.ehome.activity.accomodation.ControlActivity;
 import com.ecode.ehome.activity.accomodation.SpaceActivity;
 import com.ecode.ehome.activity.dashboard.DashboardActivity;
 import com.ecode.ehome.activity.login.LoginActivity;
@@ -42,7 +43,7 @@ public class BaseDrawerActivity extends BaseActivity implements NavigationView.O
             put(R.id.menu_dashboard_item, DashboardActivity.class);
             put(R.id.menu_accomodations_item, AccomodationActivity.class);
             put(R.id.menu_spaces_item, SpaceActivity.class);
-            put(R.id.menu_controls_item, DashboardActivity.class);
+            put(R.id.menu_controls_item, ControlActivity.class);
             put(R.id.menu_logout_item, null);
     }};
 
