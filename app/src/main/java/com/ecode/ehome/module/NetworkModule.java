@@ -2,8 +2,10 @@ package com.ecode.ehome.module;
 
 import com.ecode.ehome.datasource.AccomodationDataSource;
 import com.ecode.ehome.datasource.AuthenticationDataSource;
+import com.ecode.ehome.datasource.SpaceDataSource;
 import com.ecode.ehome.datasource.impl.AccomodationDataSourceImpl;
 import com.ecode.ehome.datasource.impl.AuthenticationDataSourceImpl;
+import com.ecode.ehome.datasource.impl.SpaceDataSourceImpl;
 
 import javax.inject.Singleton;
 
@@ -27,5 +29,11 @@ public class NetworkModule {
     @Singleton
     public AccomodationDataSource provideAccomodationService(Retrofit retrofit){
         return new AccomodationDataSourceImpl(retrofit);
+    }
+
+    @Provides
+    @Singleton
+    public SpaceDataSource provideSpaceService(Retrofit retrofit){
+        return new SpaceDataSourceImpl(retrofit);
     }
 }

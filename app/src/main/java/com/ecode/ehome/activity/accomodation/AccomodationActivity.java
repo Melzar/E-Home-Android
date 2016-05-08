@@ -1,17 +1,18 @@
 package com.ecode.ehome.activity.accomodation;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+
+import com.ecode.ehome.BR;
 import com.ecode.ehome.R;
 import com.ecode.ehome.activity.BaseDrawerActivity;
-import com.ecode.ehome.adapter.AccomodationAdapter;
+import com.ecode.ehome.adapter.MenuAdapter;
 import com.ecode.ehome.container.EHomeContainer;
 import com.ecode.ehome.datasource.AccomodationDataSource;
-import com.ecode.ehome.eventbus.AccomodationDataSourceEvents;
 import com.ecode.ehome.eventbus.AccomodationDataSourceEvents.OnGetAccomodationsSuccess;
 import com.ecode.ehome.eventbus.AccomodationDataSourceEvents.OnGetAccomodationsError;
+import com.ecode.ehome.model.Accomodation;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -38,8 +39,10 @@ public class AccomodationActivity extends BaseDrawerActivity {
 
     @Subscribe
     public void onAccomodationsGetSuccess(OnGetAccomodationsSuccess success){
-        AccomodationAdapter adapter =  new AccomodationAdapter(getLayoutInflater(),
-                success.getAccomodations());
+        MenuAdapter<Accomodation> adapter =  new MenuAdapter<>(getLayoutInflater(),
+                success.getAccomodations(),
+                R.layout.list_view_accomodation_row_item,
+                BR.accomodation);
         accomodationsList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }

@@ -21,14 +21,15 @@
         </activity>
         <activity
             android:name=".activity.BaseActivity"
-            android:label=""></activity>
+            android:label="" />
         <activity
             android:name=".activity.dashboard.DashboardActivity"
-            android:label="@string/dashboard"></activity>
+            android:label="@string/dashboard" />
         <activity
             android:name=".activity.BaseDrawerActivity"
-            android:label=""></activity>
-        <activity android:name=".activity.accomodation.AccomodationActivity"></activity>
+            android:label="" />
+        <activity android:name=".activity.accomodation.AccomodationActivity" />
+        <activity android:name=".activity.accomodation.SpaceActivity"></activity>
     </application>
 
 </manifest>
