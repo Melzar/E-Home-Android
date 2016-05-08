@@ -5,7 +5,12 @@ import com.ecode.ehome.common.security.AuthenticationTokenUtility;
 import com.ecode.ehome.common.security.SessionUtility;
 import com.ecode.ehome.compatibility.JSONAPIConverterFactory;
 import com.ecode.ehome.model.Accomodation;
+import com.ecode.ehome.model.AccomodationType;
 import com.ecode.ehome.model.Authentication;
+import com.ecode.ehome.model.Control;
+import com.ecode.ehome.model.ControlType;
+import com.ecode.ehome.model.Space;
+import com.ecode.ehome.model.SpaceType;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -64,7 +69,14 @@ public class ApiModule {
         return new Retrofit.Builder()
                 .baseUrl(API_URL)
                 .client(httpClient.build())
-                .addConverterFactory(new JSONAPIConverterFactory(objectMapper, Accomodation.class))
+                .addConverterFactory(new JSONAPIConverterFactory(
+                        objectMapper,
+                        Accomodation.class,
+                        AccomodationType.class,
+                        Space.class,
+                        SpaceType.class,
+                        Control.class,
+                        ControlType.class))
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

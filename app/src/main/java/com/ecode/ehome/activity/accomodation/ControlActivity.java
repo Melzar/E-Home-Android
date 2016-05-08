@@ -41,7 +41,7 @@ public class ControlActivity extends BaseDrawerActivity {
         MenuAdapter<Control> adapter = new MenuAdapter<>(getLayoutInflater(),
                 success.getControls(),
                 R.layout.list_view_control_row_item,
-                BR.space);
+                BR.control);
         controlsList.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
